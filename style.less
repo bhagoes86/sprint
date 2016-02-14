@@ -1,0 +1,167 @@
+/* ================================== */
+/* VARIABEL */
+@url-bg-foto: "http://res.cloudinary.com/timdonat/image/upload/c_scale,e_grayscale,w_1548/v1455394579/photo-1445252454112-997778161cbe_mjkuxb.jpg";
+@orange: #FB9E3F;
+@orange-hover: #EA943D;
+
+
+/* ================================== */
+/*  GLOBAL LESS */
+body {
+    font-family: Ubuntu, sans-serif;
+}
+.bg-full {
+    background-position-y: 25%;
+	background-image: url(@url-bg-foto);
+	background-size: inherit;
+}
+.bg-all-bootstrap {
+    background: #ebf0f4;
+}
+.navbar{
+	background-color: @orange;
+    border-radius: 0;
+    border: 0;
+}
+.navbar-brand {
+	color: #FFF;
+    height: 40px;
+}
+
+
+/* ================================== */
+/* HOME PAGE */
+.box-welcome {
+	text-align: center;
+	margin-top: 13%;
+	padding: 20px;
+	color: #FFF;
+	/* untuk judul */
+	#judul {
+		text-decoration: underline;
+	    color: rgba(255, 255, 255, 0.73);
+	}
+	/* div untuk margin button  */
+	div {
+		margin-top: 50px;
+	}
+	button {
+		border-radius: 25px;
+		min-width: 250px;
+		text-transform: uppercase;
+		.transisi-custom(1s);
+	}
+	/* untuk button  */
+	.kiri {
+		margin-right: 30px;
+	}
+	.kanan {
+		margin-left: 30px;
+	}
+	@media screen and (max-width: 600px) {
+		.kiri {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+		.kanan {
+			margin-left: 0;
+		}	
+	}
+}
+.small-model {
+	padding: 20px;
+    text-align: center;	
+    form {
+    	padding-left: 10px;
+    	padding-right: 10px;
+    }
+}
+/* LOGIN PAGE */
+.box-login {
+    background: #fff;
+    box-shadow: 0 1px rgba(0,0,0,.08);
+    border-radius: 3px;
+    padding: 36px 70px 40px;
+    
+    .form-group {
+    	margin-bottom: 30px;
+    }
+    label {
+    	font-size: 22px;
+	    line-height: 24px;
+	    margin: 0 0 12px;
+        font-weight: 100;
+    }
+    .form-control {
+	    .form-control-hg;
+    }
+    .div-btn-login {
+    	margin-bottom: 5px;
+    	margin-top: 50px;	
+    }
+}
+.box-login-footer {
+	margin-top: 30px;
+	a, p {
+		font-size: 17px;
+	}
+}
+
+
+/* ================================== */
+/* MIXIN */
+.transisi-custom(@s) {
+	-webkit-transition: background-color @s ease-out;
+	-moz-transition: background-color @s ease-out;
+	-o-transition: background-color @s ease-out;
+	transition: background-color @s ease-out;
+}
+
+
+/* ================================== */
+/* COMPONENT */
+.btn-outline {
+    color: #FFF;
+    background-color: transparent;
+    border-color: #FFF;
+}
+.form-control:focus {
+    border-color: @orange;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(251,158,63,0.6);
+}
+.form-control-hg {
+	height: 55px;
+    font-size: 24px;
+    line-height: 26px;
+    padding: 12px 20px;
+    font-weight: 700;
+}
+.title-box {
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+/* Button custom */
+.btn-orange {
+	color: #FFF;
+	background-color: @orange;
+	border-radius: 2px;
+	border-style: none;
+}
+.btn-orange:hover {
+	color: #FFF;
+	background-color: @orange-hover;
+	border-radius: 2px;
+	border-style: none;	
+}
+.space-down {
+	margin-bottom: 70px;
+}
+.btn-header-right {
+	color: #FFF !important;
+}
+.nav>.active>a, .nav>li>a:hover {
+	background-color: @orange-hover !important;
+}

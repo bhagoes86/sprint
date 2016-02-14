@@ -10,6 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet/less" type="text" href="style.less">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -35,11 +36,11 @@
 			
 			<div class="navbar-right">
 				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="login.html" class="btn-orange btn-header-right">LOGIN <span class="sr-only">(current)</span></a>
+					<li class="">
+						<a href="login.html" class="btn-orange btn-header-right">LOGIN </a>
 					</li>
-					<li>
-						<a href="signup.html" class="btn-orange btn-header-right">SIGN UP <span class="sr-only">(current)</span></a>
+					<li class="active">
+						<a href="signup.html" class="btn-orange btn-header-right">SIGN UP </a>
 					</li>
 				</ul>
 			</div>
@@ -48,9 +49,9 @@
 	</nav>
 
 	<div class="container">
+		<h1 class="title-box">SIGNUP TO SPRINT</h1>
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<h1 class="title-box">LOGIN TO SPRINT</h1>
+			<div class="col-md-8">
 				<div class="box-login">
 					<form action="" class="form-horizontal">
 						<div class="form-group">
@@ -58,20 +59,48 @@
 							<input type="email" id="email" name="email" class="form-control">
 						</div>
 						<div class="form-group">
-							<label for="email">Password</label>
+							<label for="password">Password</label>
 							<input type="password" id="password" name="password" class="form-control">
 						</div>
+						<div class="form-group">
+							<label for="repassword">Re-password</label>
+							<input type="password" id="repassword" name="repassword" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="name">Nama</label>
+							<input type="text" id="name" name="name" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="handphone">Nomer Handphone</label>
+							<input type="text" id="handphone" name="handphone" class="form-control">
+						</div>
 						<div class="form-group div-btn-login">
-							<button class="btn btn-orange btn-lg btn-block">LOGIN</button>
+							<button class="btn btn-orange btn-lg btn-block">SIGN UP</button>
 						</div>
 					</form>
 				</div>
 
-				<div class="text-center box-login-footer ">
-					<a href="#">Lupa password Anda?</a>
-					<p>Belum punya akun sprint? <a href="#">Sign Up!</a></p>
-				</div>
+				<br><br>
 
+			</div>
+
+			<div class="col-md-4">
+				<div class="box-signup-right">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore maiores, deleniti odit laudantium temporibus, voluptatibus quas eveniet itaque sunt id est minus eligendi obcaecati aperiam omnis, sint suscipit nihil commodi.</p>
+					<br>
+					<div class="step-signup">
+						<div><i class="fa fa-cloud-upload fa-4x"></i></div> <span>Upload File Dokumen</span>
+					</div>
+					<div class="step-signup">
+						<div><i class="fa fa-mobile-phone fa-4x"></i></div> <span>Kirim Konfirmasi</span>
+					</div>
+					<div class="step-signup">
+						<div><i class="fa fa-hand-grab-o fa-4x"></i></div> <span>Ambil Dokumen</span>
+					</div>
+					<div class="step-signup">
+						<div><i class="fa fa-money fa-4x"></i></div> <span>Bayar</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

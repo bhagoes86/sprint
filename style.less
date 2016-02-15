@@ -205,3 +205,34 @@ body {
 	    border-top: 1px solid #44596F;
 	}
 }
+/* CSS FOT STEP */
+.step-custom {
+	div {
+		background-color: @orange;
+		color: #FFF;
+		font-size: 17px;
+		padding: 0; display: flex;
+	}
+	.active {
+		background-color: @orange-hover;
+	}
+	span {
+		padding: 20px;
+		width: 100%;
+	}
+}
+
+.arrow-right {
+	height: 0;
+    border-top: 32px solid transparent;
+    border-bottom: 32px solid transparent;
+    border-left: 20px solid #EBF0F4;
+    padding: 0;
+}
+#end-step {
+    background-color: #EBF0F4;
+    border-left: 20px solid @orange-hover;
+}
+.active-step {
+    background-color: rgb(202, 149, 95) !important;
+}

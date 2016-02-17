@@ -3,6 +3,7 @@
 @url-bg-foto: "http://res.cloudinary.com/timdonat/image/upload/c_scale,e_grayscale,w_1548/v1455394579/photo-1445252454112-997778161cbe_mjkuxb.jpg";
 @orange: #FB9E3F;
 @orange-hover: #EA943D;
+@abu-sidebar: #f2f7fa;
 
 
 /* ================================== */
@@ -27,7 +28,18 @@ body {
 	color: #FFF;
     height: 40px;
 }
-
+.div-sidebar {
+	background: @abu-sidebar;
+    border-radius: 3px;
+    padding: 31px 41px;
+    box-shadow: 0 1px rgba(0,0,0,.08);
+}
+.div-area {
+	background: #FFF;
+    border-radius: 3px;
+    padding: 31px 41px;
+    box-shadow: 0 1px rgba(0,0,0,.08);
+}
 
 /* ================================== */
 /* HOME PAGE */
@@ -125,10 +137,7 @@ body {
 	}
 }
 .box-signup-right {
-    background: #f2f7fa;
-    border-radius: 3px;
-    padding: 31px 41px;
-    box-shadow: 0 1px rgba(0,0,0,.08);
+    .div-sidebar;
 }
 /* KONFIRMASI PAGE */
 .box-konfirmasi {
@@ -146,6 +155,18 @@ body {
 	    margin-left: 0px;
 	}
 }
+/* DASHBOARD PAGE */
+#div-saldo {
+	h1 {
+		text-align: right;
+	}
+}
+#div-profil {
+	table {
+		margin-top: 10px;
+	}
+}
+
 
 
 /* ================================== */

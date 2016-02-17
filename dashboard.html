@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.: SPRINT :.</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Speed Printing - Teknologi baru ngeprint tanpa antri">
+    <meta name="author" content="Sprint ID">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet/less" type="text" href="style.less">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="less.min.js"></script>
+
+	<!-- TAMBAHAN TABLE -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/> -->
+	<script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#tabel').DataTable();
+			$('#tabel-file').DataTable();
+		} );
+	</script>
+</head>
+<body class="bg-all-bootstrap">
+
+	<nav class="navbar navbar-default">
+		<div class="container">			
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#" style="padding: 0;">
+					<img alt="Brand" src="https://printgila.com/img/logo-w.png">
+					<a class="navbar-brand" href="#" style="color: #FFF;padding-left: 20px">Sprint ID</a>
+				</a>
+			</div>
+			
+			<div class="navbar-right">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="dashboard.html" class="btn-orange btn-header-right">DASHBOARD </a>
+					</li>
+					<li class="">
+						<a href="print.html" class="btn-orange btn-header-right">PRINT </a>
+					</li>
+					<li class="">
+						<a href="logut.html" class="btn-orange btn-header-right">LOGOUT </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h1 class="title-box">DASHBOARD</h1>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="div-sidebar">
+					<div id="div-saldo">
+						Saldo
+						<h1>Rp. <span id="nominal-saldo">0</span>,-</h1>
+					</div>
+					<br>
+					<div id="div-profil">
+						Profil Anda
+						<table>
+							<tbody>
+								<tr>
+									<td width="40%">Nama</td>
+									<td>Joko Irianto</td>
+								</tr>
+								<tr>
+									<td>Email</td>
+									<td>irianto94@outlook.com</td>
+								</tr>
+								<tr>
+									<td>No Hp</td>
+									<td>085732401129</td>
+								</tr>
+								<tr>
+									<td>Password</td>
+									<td><a href="#">ubah password</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-md-8">
+				<div class="div-area">
+					<h3>Histori Print</h3>
+					<hr>
+					<table class="table table-bordered" id="tabel" style="font-size: 15px;">
+						<thead>
+							<tr>
+								<td width="10%">No</td>
+								<td>Invoice</td>
+								<td>Biaya</td>
+								<td>Status</td>
+								<td>Aksi</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>4087</td>
+								<td>3.000,-</td>
+								<td>DONE</td>
+								<td><button class="btn btn-success"><i class="fa fa-search-plus"></i> 	Detail</button></td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<h3>File</h3>
+					<hr>
+					<table class="table table-bordered" id="tabel-file" style="font-size: 15px;">
+						<thead>
+							<tr>
+								<td width="10%">No</td>
+								<td>Nama File</td>
+								<td>Extensi</td>
+								<td>Aksi</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Makalah PKM</td>
+								<td>.pdf</td>
+								<td><button class="btn btn-success"><i class="fa fa-cloud-download"></i> Download</button></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Makalah LPJ HIMATIKA</td>
+								<td>.doc</td>
+								<td><button class="btn btn-success"><i class="fa fa-cloud-download"></i> Download</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, minus accusamus deserunt sunt totam eveniet. Similique necessitatibus rem laudantium, quibusdam earum placeat. Perspiciatis iure consequuntur eaque necessitatibus ea. Hic, omnis.</p>
+			<br>
+			<hr>
+			2016 - Timdonat
+
+		</div>
+	</div>
+
+</body>
+</html>

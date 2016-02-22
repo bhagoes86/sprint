@@ -20,6 +20,12 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('/login', function(){
+Route::get('/login2', function(){
  return view('contents.login');
 });
+
+// untuk login system
+Route::get('/login', ['as' => 'user.login', 'uses' => 'UserController@getLogin']);
+Route::post('/login', ['as' => 'user.postLogin', 'uses' => 'UserController@postLogin']);
+
+

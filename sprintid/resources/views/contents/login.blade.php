@@ -12,7 +12,18 @@
 			<div class="col-md-8 col-md-offset-2">
 				<h1 class="title-box">LOGIN TO SPRINT</h1>
 				<div class="box-login">
-					<form action="" class="form-horizontal">
+					 @if (count($errors) > 0)
+                                                <div class="alert alert-danger">
+                                                        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                                                        <ul>
+                                                                @foreach ($errors->all() as $error)
+                                                                        <li>{{ $error }}</li>
+                                                                @endforeach
+                                                        </ul>
+                                                </div>
+                                        @endif
+
+					{!! Form::open(array('url' => '/auth/login','class' => 'form-horizontal' )) !!}
 						<div class="form-group">
 							<label for="email">Email</label>
 							<input type="email" id="email" name="email" class="form-control">
@@ -22,9 +33,9 @@
 							<input type="password" id="password" name="password" class="form-control">
 						</div>
 						<div class="form-group div-btn-login">
-							<button class="btn btn-orange btn-lg btn-block">LOGIN</button>
+							<button class="btn btn-orange btn-lg btn-block" type="submit">LOGIN</button>
 						</div>
-					</form>
+					{!! Form::close() !!}
 				</div>
 
 				<div class="text-center box-login-footer ">

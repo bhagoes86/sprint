@@ -1,65 +1,65 @@
-@extends('app')
+@extends('layouts.default')
 
 @section('content')
-<div class="container-fluid">
+
+@include('partials.header-initial')
+
+<div class="container">
+	<h1 class="title-box">SIGNUP TO SPRINT</h1>
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Register</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
-
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">Name</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" value="{{ old('name') }}">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">Confirm Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password_confirmation">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
-									Register
-								</button>
-							</div>
-						</div>
-					</form>
+		<div class="col-md-8">
+			<div class="box-login">
+				<form action="{{ url('/auth/register') }}" role="form" method="POST" class="form-horizontal"><input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" id="password" name="password" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="repassword">Re-password</label>
+						<input type="password" id="repassword" name="repassword" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="name">Nama</label>
+						<input type="text" id="name" name="name" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="handphone">Nomer Handphone</label>
+						<input type="text" id="handphone" name="handphone" class="form-control">
+					</div>
+					<div class="form-group div-btn-login">
+						<button class="btn btn-orange btn-lg btn-block" type="submit">SIGN UP</button>
+					</div>
+				</form>
+			</div>
+			<br><br>
+		</div>
+		<div class="col-md-4">
+			<div class="box-signup-right">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore maiores, deleniti odit laudantium temporibus, voluptatibus quas eveniet itaque sunt id est minus eligendi obcaecati aperiam omnis, sint suscipit nihil commodi.</p>
+				<br>
+				<div class="step-signup">
+					<div><i class="fa fa-cloud-upload fa-4x"></i></div> <span>Upload File Dokumen</span>
+				</div>
+				<div class="step-signup">
+					<div><i class="fa fa-mobile-phone fa-4x"></i></div> <span>Kirim Konfirmasi</span>
+				</div>
+				<div class="step-signup">
+					<div><i class="fa fa-hand-grab-o fa-4x"></i></div> <span>Ambil Dokumen</span>
+				</div>
+				<div class="step-signup">
+					<div><i class="fa fa-money fa-4x"></i></div> <span>Bayar</span>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-@endsection
+
+@include('partials.footer')
+
+
+@stop
+

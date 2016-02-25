@@ -4,7 +4,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+
 use Illuminate\Http\Request;
+use Validator;
 
 class AuthController extends Controller {
 
@@ -46,21 +48,59 @@ class AuthController extends Controller {
 		return view('auth.register');
 	}
 
+	// public function postRegister(Request $request)
+	// {
+	// 	// return 'hello jo';
+	// 	$validator = $this->registrar->validator($request->all());
+
+	// 	if ($validator->fails())
+	// 	{
+	// 		$this->throwValidationException(
+	// 			$request, $validator
+	// 		);
+	// 	}
+
+	// 	$this->auth->login($this->registrar->create($request->all()));
+
+	// 	return redirect($this->redirectPath());
+	// }
+
 	public function postRegister(Request $request)
 	{
-		// return 'hello jo';
-		$validator = $this->registrar->validator($request->all());
+		$validator = Validator::make(
+		    ['name' => 'Dayle'],
+		    ['name' => ['required', 'min:5']]
+		);
+		// $validator = Validator::make(
+		//     $request, ['name' => 'required|min:5']
+		// );
 
 		if ($validator->fails())
 		{
-			$this->throwValidationException(
-				$request, $validator
-			);
+		    // The given data did not pass validation
+		    return "salah";
 		}
+		// $validator = Validator::make(Input::all(), 
+		// 		['name' => 'required|min:5']
+		// 	);
 
-		$this->auth->login($this->registrar->create($request->all()));
+	//    // Create a new validator instance.
+	 //    $validator = $this->registrar->validator(
+		//     ['name' => 'required|min:5']
+	 //    );
 
-		return redirect($this->redirectPath());
+		// if ($validator->fails())
+		// {
+		// 	$this->throwValidationException(
+		// 		$request, $validator
+		// 	);
+		// }
+
+	 // //    $validator = Validator::make(
+		// //     ['name' => 'required|min:5']
+		// // );
+
+		return var_dump($request->all());
 	}
 
 }

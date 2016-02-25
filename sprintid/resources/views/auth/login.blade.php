@@ -1,11 +1,8 @@
-
-
-
 @extends('layouts.default')
 
 @section('content')
 
-@include('partials.header-initial')
+@include('partials.header-initial', array('login'=>'active'))
 
 <div class="container">
 	<div class="row">
@@ -13,7 +10,7 @@
 			<h1 class="title-box">LOGIN TO SPRINT</h1>
 			@if (count($errors) > 0)
 			<div class="alert alert-danger">
-				<strong>Whoops!</strong> There were some problems with your input.<br><br>
+				<strong>Sorry</strong> There were some problems with your input.<br><br>
 				<ul>
 					@foreach ($errors->all() as $error)
 					<li>{{ $error }}</li>
@@ -47,7 +44,7 @@
 			</div>
 
 			<div class="text-center box-login-footer ">
-				<a href="{{ url('/auth/login')  }}">Lupa password Anda?</a>
+				<a href="{{ url('/auth/forget')  }}">Lupa password Anda?</a>
 				<p>Belum punya akun sprint? <a href="{{ url('/auth/register') }}">Sign Up!</a></p>
 			</div>
 

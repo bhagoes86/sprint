@@ -2,17 +2,27 @@
 
 @section('content')
 
-@include('partials.header-initial')
-
+@include('partials.header-initial', array('signup'=>'active'))
+					
 <div class="container">
 	<h1 class="title-box">SIGNUP TO SPRINT</h1>
 	<div class="row">
 		<div class="col-md-8">
+			@if (count($errors) > 0)
+				<div class="alert alert-danger">
+					<strong>Sorry!</strong> There were some problems with your input.<br><br>
+					<ul>
+						@foreach ($errors->all() as $error)
+							<li>{{ $error }}</li>
+						@endforeach
+					</ul>
+				</div>
+			@endif
 			<div class="box-login">
 				<form action="{{ url('/auth/register') }}" role="form" method="POST" class="form-horizontal"><input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<div class="form-group">
 						<label for="email">Email</label>
-						<input type="email" id="email" name="email" class="form-control">
+						<input type="email" id="email" name="email" class="form-control" value="{{ old('email') }}">
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
@@ -20,15 +30,15 @@
 					</div>
 					<div class="form-group">
 						<label for="repassword">Re-password</label>
-						<input type="password" id="repassword" name="repassword" class="form-control">
+						<input type="password" id="password_confirmation" name="password_confirmation" class="form-control">
 					</div>
 					<div class="form-group">
 						<label for="name">Nama</label>
-						<input type="text" id="name" name="name" class="form-control">
+						<input type="text" id="name" name="name" class="form-control" value="{{ old('name') }}">
 					</div>
 					<div class="form-group">
 						<label for="handphone">Nomer Handphone</label>
-						<input type="text" id="handphone" name="handphone" class="form-control">
+						<input type="text" id="no_hp" name="no_hp" class="form-control" value="{{ old('no_hp') }}">
 					</div>
 					<div class="form-group div-btn-login">
 						<button class="btn btn-orange btn-lg btn-block" type="submit">SIGN UP</button>
@@ -60,6 +70,4 @@
 
 @include('partials.footer')
 
-
 @stop
-

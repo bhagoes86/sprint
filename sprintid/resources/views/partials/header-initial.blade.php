@@ -9,11 +9,11 @@
 			
 			<div class="navbar-right">
 				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="login.html" class="btn-orange btn-header-right">LOGIN <span class="sr-only">(current)</span></a>
+					<li class="{{ $login or '' }}">
+						<a href="{{ url('/auth/login') }}" class="btn-orange btn-header-right">LOGIN <span class="sr-only">(current)</span></a>
 					</li>
-					<li>
-						<a href="signup.html" class="btn-orange btn-header-right">SIGN UP <span class="sr-only">(current)</span></a>
+					<li class="{{ $signup or '' }}">
+						<a href="{{ url('/auth/register') }}" class="btn-orange btn-header-right">SIGN UP <span class="sr-only">(current)</span></a>
 					</li>
 				</ul>
 			</div>

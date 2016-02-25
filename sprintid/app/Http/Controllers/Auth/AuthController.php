@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 use Illuminate\Http\Request;
 use Validator;
+use App\User;
 
 class AuthController extends Controller {
 
@@ -48,59 +49,39 @@ class AuthController extends Controller {
 		return view('auth.register');
 	}
 
-	// public function postRegister(Request $request)
-	// {
-	// 	// return 'hello jo';
-	// 	$validator = $this->registrar->validator($request->all());
-
-	// 	if ($validator->fails())
-	// 	{
-	// 		$this->throwValidationException(
-	// 			$request, $validator
-	// 		);
-	// 	}
-
-	// 	$this->auth->login($this->registrar->create($request->all()));
-
-	// 	return redirect($this->redirectPath());
-	// }
-
 	public function postRegister(Request $request)
 	{
-		$validator = Validator::make(
-		    ['name' => 'Dayle'],
-		    ['name' => ['required', 'min:5']]
-		);
-		// $validator = Validator::make(
-		//     $request, ['name' => 'required|min:5']
-		// );
+	    $v = Validator::make($request->all(), [
+	        'name' 		=> 'required|max:255',
+			'email' 	=> 'required|email|max:255|unique:users',
+			'password' 	=> 'required|confirmed|min:6',
+			'no_hp' 	=> 'required|digits_between:8,25|numeric'
+	    ]);
 
-		if ($validator->fails())
-		{
-		    // The given data did not pass validation
-		    return "salah";
-		}
-		// $validator = Validator::make(Input::all(), 
-		// 		['name' => 'required|min:5']
-		// 	);
+	    if ( $v->fails() ) {
+	        return redirect()->back()->withErrors($v->errors())->withInput();;
+	    }
 
-	//    // Create a new validator instance.
-	 //    $validator = $this->registrar->validator(
-		//     ['name' => 'required|min:5']
-	 //    );
+	    // call method saving data 
+	    $this->create($request->all());
 
-		// if ($validator->fails())
-		// {
-		// 	$this->throwValidationException(
-		// 		$request, $validator
-		// 	);
-		// }
+		return redirect($this->redirectPath());
+	}
 
-	 // //    $validator = Validator::make(
-		// //     ['name' => 'required|min:5']
-		// // );
-
-		return var_dump($request->all());
+	/**
+	 * Create a new user instance after a valid registration.
+	 *
+	 * @param  array  $data
+	 * @return User
+	 */
+	public function create(array $data)
+	{
+		return User::create([
+			'name' 		=> $data['name'],
+			'email' 	=> $data['email'],
+			'password' 	=> bcrypt($data['password']),
+			'no_hp' 	=> $data['no_hp'],
+		]);
 	}
 
 }

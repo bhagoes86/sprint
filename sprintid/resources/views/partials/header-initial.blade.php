@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#" style="padding: 0;">
@@ -6,7 +6,6 @@
 					<a class="navbar-brand" href="#" style="color: #FFF;padding-left: 20px">Sprint ID</a>
 				</a>
 			</div>
-			
 			<div class="navbar-right">
 				<ul class="nav navbar-nav">
 					<li class="{{ $login or '' }}">

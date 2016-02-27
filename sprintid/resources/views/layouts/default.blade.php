@@ -14,6 +14,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text" href="{{ asset('css/style.css') }}">
 
+    <link rel="icon" href="http://res.cloudinary.com/timdonat/image/upload/c_thumb,w_25/v1456559153/logo_sprint_hn3tbp.png" type="image/x-icon">
+    
+    <!-- Sweet alert -->
+    <script src="{{ asset('js/sweetalert.min.js') }}"></script>
+    <link rel="stylesheet" type="text" href="{{ asset('css/sweetalert.css') }}">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,8 +32,6 @@
 <body class="bg-all-bootstrap">
 
 	@yield('content')
-
-	
 
 	@yield('script')
 

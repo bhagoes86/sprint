@@ -145,7 +145,7 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 		'Collective\Html\HtmlServiceProvider',
-
+		'UxWeb\SweetAlert\SweetAlertServiceProvider'
 	],
 
 	/*
@@ -195,6 +195,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form'	    => 'Collective\Html\FormFacade',
  		'Html' 	    => 'Collective\Html\HtmlFacade',
+		'Alert'     => 'UxWeb\SweetAlert\SweetAlert'
 	],
 
 ];

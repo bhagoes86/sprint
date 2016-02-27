@@ -40,32 +40,47 @@ class AuthController extends Controller {
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
 
-	// custom method 
-	/*
-	Created by Joko Irianto
-	*/
-	public function getRegister()
+	/**
+	 * this code below was made by 
+	 * Joko Irianto
+	 */
+	
+	public function getLogin(Request $request)
 	{
+		// notification that account was regist 
+		if (\Session::has('message')) {
+		    \Session::forget('message');
+		    \Alert::success('Akun anda telah terdaftar, Silahkan login' , 'Selamat!')->persistent("close");
+		}
+
+		return view('auth.login');
+	}
+
+	public function getRegister()
+	{	
 		return view('auth.register');
 	}
 
+
 	public function postRegister(Request $request)
-	{
+	{	  
 	    $v = Validator::make($request->all(), [
 	        'name' 		=> 'required|max:255',
 			'email' 	=> 'required|email|max:255|unique:users',
 			'password' 	=> 'required|confirmed|min:6',
-			'no_hp' 	=> 'required|digits_between:8,25|numeric'
+			'no_hp' 	=> 'required|unique:users|digits_between:8,25|numeric'
 	    ]);
 
 	    if ( $v->fails() ) {
 	        return redirect()->back()->withErrors($v->errors())->withInput();;
 	    }
 
-	    // call method saving data 
+	    // calling method saving data 
 	    $this->create($request->all());
 
-		return redirect($this->redirectPath());
+	    \Session::flash('message', 'Success');
+
+		return redirect('auth/login');
 	}
 
 	/**

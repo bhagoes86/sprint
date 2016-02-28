@@ -2,8 +2,6 @@
 @extends('layouts.default')
 
 @section('head')
-    <script src="{{ asset('js/moment.js') }}"></script>
-    <script src="{{ asset('js/combodate.js') }}"></script> 
 @stop
 
 @section('content')
@@ -75,12 +73,29 @@
 					</div>
 
 					<div class="form-group">
-						<input type="text" id="datetime12" data-format="DD-MM-YYYY h:mm a" data-template="DD / MM / YYYY     hh : mm a" name="datetime" value="21-12-2012 8:30 pm" class="form-control">
-						<script>
-						$(function(){
-						    $('#datetime12').combodate();  
-						});
-						</script>
+						<label for="lokasi">Jam Ambil</label>
+						<div class="row">
+							<div class="col-md-4">
+								<select name="lokasi" id="lokasi" class="form-control">
+									<option value="0">-- Jam --</option>
+									<option value="1">01</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<select name="lokasi" id="lokasi" class="form-control">
+									<option value="0">-- Menit --</option>
+									<option value="1">01</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<select name="lokasi" id="lokasi" class="form-control">
+									<option value="0">-- Hari --</option>
+									<option value="1">Hari ini</option>
+									<option value="2">1 Hari lagi</option>
+									<option value="2">2 Hari lagi</option>
+								</select>
+							</div>
+						</div>
 					</div>
 
 					<div class="form-group">

@@ -8,7 +8,6 @@
 
 @include('partials.header-was-login', array('print' => 'active'))
 
-
 <div class="container">
 	<h1 class="title-box">PRINT IN SPRINT</h1>
 
@@ -44,10 +43,7 @@
 					</div>
 					<div class="form-group">
 						<label for="lokasi">Lokasi Pengambilan</label>
-						<select name="lokasi" id="lokasi" class="form-control">
-							<option value="0">-- PILIH LOKASI --</option>
-							<option value="1">BETA - FST UNAIR</option>
-						</select>
+						{!! Form::select( "lokasi", array('BETA - FST UNAIR'), null,  array('class' => 'form-control', 'id'=>'lokasi') ) !!}
 					</div>
 
 					<div class="form-group">
@@ -84,7 +80,8 @@
 							<div class="col-md-4">
 								<select name="lokasi" id="lokasi" class="form-control">
 									<option value="0">-- Menit --</option>
-									<option value="1">01</option>
+									<option value="1">05</option>
+									ul>li.item$*5
 								</select>
 							</div>
 							<div class="col-md-4">

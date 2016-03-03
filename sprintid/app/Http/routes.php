@@ -6,6 +6,8 @@ Route::get('home', 'HomeController@index');
 
 // print routing
 Route::get('print', 'PrintController@index');
+Route::post('print', ['as' => 'print.step1', 'uses' => 'PrintController@create']);
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

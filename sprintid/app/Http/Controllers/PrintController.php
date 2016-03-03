@@ -25,7 +25,10 @@ class PrintController extends Controller {
 	 */
 	public function index()
 	{
-		return view('contents.print.step-1');
+		$data = [
+			'place'			=> \App\Models\Place::lists('name_place', 'id'),
+		];
+		return view('contents.print.step-1', $data);
 	}
 
 	/**
@@ -33,9 +36,9 @@ class PrintController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create(Request $request)
 	{
-		//
+		return $request->all();
 	}
 
 	/**

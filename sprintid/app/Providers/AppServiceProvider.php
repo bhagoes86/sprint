@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Repositories\Place\PlaceRepository;
 
 class AppServiceProvider extends ServiceProvider {
 
@@ -29,6 +30,7 @@ class AppServiceProvider extends ServiceProvider {
 			'Illuminate\Contracts\Auth\Registrar',
 			'App\Services\Registrar'
 		);
+
 	}
 
 }

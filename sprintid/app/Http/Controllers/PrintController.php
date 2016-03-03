@@ -26,7 +26,7 @@ class PrintController extends Controller {
 	public function index()
 	{
 		$data = [
-			'place'			=> \App\Models\Place::lists('name_place', 'id'),
+			'place'			=> app('App\Repositories\Place\PlaceRepository')->getAll()->lists('name_place', 'id'),
 		];
 		return view('contents.print.step-1', $data);
 	}
@@ -38,6 +38,15 @@ class PrintController extends Controller {
 	 */
 	public function create(Request $request)
 	{
+		// validation
+		$v = \Validator::make($request->all(), [
+	        'file_name' 		=> 'required',
+	    ]);
+
+	    if ( $v->fails() ) {
+	        return redirect()->back()->withErrors($v->errors())->withInput();;
+	    }
+
 		return $request->all();
 	}
 

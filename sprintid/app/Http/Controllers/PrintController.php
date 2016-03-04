@@ -40,12 +40,14 @@ class PrintController extends Controller {
 	{
 		// validation
 		$v = \Validator::make($request->all(), [
-	        'file_name' 		=> 'required',
-	    ]);
+	        	'file_name' 		=> 'required',
+			'lokasi'		=> 'required',
+			'type_print'		=> 'required'
+	    	]);
 
-	    if ( $v->fails() ) {
-	        return redirect()->back()->withErrors($v->errors())->withInput();;
-	    }
+	    	if ( $v->fails() ) {
+	        	return redirect()->back()->withErrors($v->errors())->withInput();;
+	    	}
 
 		return $request->all();
 	}

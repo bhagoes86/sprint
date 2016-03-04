@@ -36,15 +36,25 @@
 				</div>
 			</div>
 			<div class="box-login">
+				@if (count($errors) > 0)
+				<div class="alert alert-danger">
+					<strong>Sorry</strong> There were some problems with your input.<br><br>
+					<ul>
+						@foreach ($errors->all() as $error)
+						<li>{{ $error }}</li>
+						@endforeach
+					</ul>
+				</div>
+				@endif
 				<div class="form-horizontal">
 				{!! Form::open(['route'=>'print.step1']) !!}
 					<div class="form-group">
-						<label for="file_name">File</label>
-						<input type="file" id="file_name" name="file_name" class="form-control">
+						<label for="url_file">File</label>
+						<input type="file" id="url_file" name="url_file" class="form-control">
 					</div>
 					<div class="form-group">
-						<label for="lokasi">Lokasi Pengambilan</label>
-						{!! Form::select( "lokasi", $place, Input::old('lokasi'),  array('class' => 'form-control', 'id'=>'lokasi') ) !!}
+						<label for="place_id">Lokasi Pengambilan</label>
+						{!! Form::select( "place_id", $place, Input::old('lokasi'),  array('class' => 'form-control', 'id'=>'lokasi') ) !!}
 					</div>
 
 					<div class="form-group">
@@ -130,8 +140,8 @@
 					</div>
 
 					<div class="form-group">
-						<label for="note">Keterangan</label>
-						<textarea name="note" id="note" cols="32" rows="10" class="form-control" placeholder="beri penjelasan halaman yang akan di print" style="height: 150px;"></textarea>
+						<label for="text_note">Keterangan</label>
+						<textarea name="text_note" id="text_note" cols="32" rows="10" class="form-control" placeholder="beri penjelasan halaman yang akan di print" style="height: 150px;"></textarea>
 					</div>
 					<div class="form-group div-btn-login">
 						<button class="btn btn-orange btn-lg btn-block" type="submit">UPLOAD</button>

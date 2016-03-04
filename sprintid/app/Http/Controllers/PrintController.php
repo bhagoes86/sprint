@@ -25,6 +25,19 @@ class PrintController extends Controller {
 	 */
 	public function index()
 	{
+// Available alpha caracters
+                $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+                // generate a pin based on 2 * 7 digits + a random character
+                $pin = mt_rand(1000000, 9999999)
+                    . mt_rand(1000000, 9999999)
+                    . $characters[rand(0, strlen($characters) - 1)];
+
+                // shuffle the result
+                $data['code'] = str_shuffle($pin);    
+	
+	//	return $data['code'];
+
 		$data = [
 			'place'			=> app('App\Repositories\Place\PlaceRepository')->getAll()->lists('name_place', 'id'),
 		];
@@ -40,14 +53,16 @@ class PrintController extends Controller {
 	{
 		// validation
 		$v = \Validator::make($request->all(), [
-	        	'file_name' 		=> 'required',
-			'lokasi'		=> 'required',
-			'type_print'		=> 'required'
+//	        	'url_file' 		=> 'required',
+			'place_id'		=> 'required|numeric',
+			'type_print'		=> 'required|numeric'
 	    	]);
 
 	    	if ( $v->fails() ) {
 	        	return redirect()->back()->withErrors($v->errors())->withInput();;
 	    	}
+
+		app('App\Repositories\PrintList\PrintListRepository')->savePrintList($request->all());
 
 		return $request->all();
 	}
@@ -59,7 +74,7 @@ class PrintController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		
 	}
 
 	/**

@@ -3,6 +3,7 @@
 
 namespace App\Repositories\PrintList;
 
+use DB;
 use App\Models\PrintList;
 use App\Repositories\Base\BaseRepository;
 
@@ -15,16 +16,8 @@ class PrintListRepository extends BaseRepository
 
 	public function savePrintList($data) {
 		
-		// Available alpha caracters
-		$characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-		// generate a pin based on 2 * 7 digits + a random character
-		$pin = mt_rand(1000000, 9999999)
-		    . mt_rand(1000000, 9999999)
-		    . $characters[rand(0, strlen($characters) - 1)];
-
-		// shuffle the result
-		$data['code'] = str_shuffle($pin);	
+		// generate code
+		$data['code'] = $this->_get_code();
 
 		return $this->model->create([
 			'url_file'		=> $data['url_file'],
@@ -35,6 +28,13 @@ class PrintListRepository extends BaseRepository
 		]);
 	}
 
+	public function _get_code()
+	{
 	
+		$code = DB::select('call get_code()');
+		
+		if(isset($code[0])) return $code[0]->random_code;
+		else return 0;
+	}	
 }
 

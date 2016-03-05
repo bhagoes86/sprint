@@ -1,0 +1,7 @@
+DELIMITER //
+CREATE PROCEDURE get_code
+()
+BEGIN
+  SELECT (FLOOR(RAND() * 8999)+1000) AS random_code FROM prints WHERE "random_code" NOT IN (SELECT code FROM prints) LIMIT 1;
+END //
+DELIMITER ;

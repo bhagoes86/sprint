@@ -47,7 +47,7 @@
 				</div>
 				@endif
 				<div class="form-horizontal">
-				{!! Form::open(['route'=>'print.step1']) !!}
+				{!! Form::open(['route'=>'print.step1', 'files'=>'true']) !!}
 					<div class="form-group">
 						<label for="url_file">File</label>
 						<input type="file" id="url_file" name="url_file" class="form-control">

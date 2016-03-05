@@ -5,8 +5,12 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 // print routing
+// step 1
 Route::get('print', 'PrintController@index');
 Route::post('print', ['as' => 'print.step1', 'uses' => 'PrintController@create']);
+// step 2
+Route::get('konfirm/{code}', ['as' => 'print.step2', 'uses' => 'PrintController@confirm']);
+Route::get('ambil/{code}', ['as' => 'print.step3', 'uses' => 'PrintController@ambil']);
 
 
 Route::controllers([

@@ -16,7 +16,7 @@ class PrintList extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['url_file', 'place_id', 'type_print', 'text_note', 'code'];
+	protected $fillable = ['user_id', 'url_file', 'place_id', 'type_print', 'text_note', 'code'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -24,5 +24,10 @@ class PrintList extends Model {
 	 * @var array
 	 */
 	protected $hidden = [];
+
+	public function place()
+	{
+		return $this->hasOne('App\Models\Place', 'id', 'place_id');
+	}
 
 }

@@ -5,6 +5,7 @@ namespace App\Repositories\PrintList;
 
 use DB;
 use App\Models\PrintList;
+use App\Models\Place;
 use App\Repositories\Base\BaseRepository;
 
 class PrintListRepository extends BaseRepository
@@ -14,12 +15,14 @@ class PrintListRepository extends BaseRepository
         	$this->model = $printList;
     	}
 
-	public function savePrintList($data) {
+	public function savePrintList($data, $user_id, $code, $url_file) {
 		
 		// generate code
-		$data['code'] = $this->_get_code();
+		$data['code'] 			= $code;
+		$data['url_file'] 		= $url_file;
 
 		return $this->model->create([
+			'user_id'		=> $user_id,
 			'url_file'		=> $data['url_file'],
 			'type_print'		=> $data['type_print'],
 			'place_id'		=> $data['place_id'],

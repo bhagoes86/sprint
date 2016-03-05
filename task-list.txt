@@ -1,0 +1,12 @@
+Task menajemen 
+
+- upload 			- done
+- konfirmasi 			- done (dinamik nomer telpon spot berdasarkan place)
+- ambil 			- kurang validasi auth untuk page ini bisa ketika sudah di print
+- bayar				- 
+
+- dashboard 			- 
+- ganti password		- 
+
+- footer content		-
+- signup content		-

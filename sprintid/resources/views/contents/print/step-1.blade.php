@@ -49,22 +49,22 @@
 				<div class="form-horizontal">
 				{!! Form::open(['route'=>'print.step1', 'files'=>'true']) !!}
 					<div class="form-group">
-						<label for="url_file">File</label>
+						<label for="url_file">File*</label>
 						<input type="file" id="url_file" name="url_file" class="form-control">
 					</div>
 					<div class="form-group">
-						<label for="place_id">Lokasi Pengambilan</label>
+						<label for="place_id">Counter Pengambilan*</label>
 						{!! Form::select( "place_id", $place, Input::old('lokasi'),  array('class' => 'form-control', 'id'=>'lokasi') ) !!}
 					</div>
 
 					<div class="form-group">
-						<label for="type_print">Jenis Print</label>
+						<label for="type_print">Jenis Print*</label>
 						<div class="row">
 							<div class="col-sm-6">
 								<div class="radio">
 									<label class="btn btn-default" style="font-size: 22px; line-height: 24px; margin: 0 0 12px; padding: 20px; font-weight: 100; padding-right: 30px; padding-left: 30px; width: 100%;">
 										<input type="radio" name="type_print" id="type_print" value="1" checked>
-										Print Hitam Putih
+										Hitam Putih
 									</label>
 								</div>
 							</div>
@@ -72,7 +72,7 @@
 								<div class="radio">
 									<label class="btn btn-default" style="font-size: 22px; line-height: 24px; margin: 0 0 12px; padding: 20px; font-weight: 100; padding-right: 30px; padding-left: 30px; width: 100%;">
 										<input type="radio" name="type_print" id="type_print" value="2">
-										Print Berwarna
+										Berwarna
 									</label>
 								</div>
 							</div>

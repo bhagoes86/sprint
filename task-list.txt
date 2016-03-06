@@ -3,10 +3,14 @@ Task menajemen
 - upload 			- done
 - konfirmasi 			- done (dinamik nomer telpon spot berdasarkan place)
 - ambil 			- kurang validasi auth untuk page ini bisa ketika sudah di print
-- bayar				- 
+- bayar				- done 
 
 - dashboard 			- 
 - ganti password		- 
 
 - footer content		-
 - signup content		-
+
+- kritik dan saran		-
+- dashboard			-
+- page not found		-

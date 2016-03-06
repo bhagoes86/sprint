@@ -14,6 +14,11 @@ class PrintListRepository extends BaseRepository
 	{
         	$this->model = $printList;
     	}
+	
+	public function getAilListMyPrint($user_id)
+	{
+		return $this->model->where('user_id', $user_id)->get();
+	}
 
 	public function savePrintList($data, $user_id, $code, $url_file) {
 		

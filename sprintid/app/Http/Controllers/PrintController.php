@@ -36,6 +36,24 @@ class PrintController extends Controller {
 		];
 		return view('contents.print.step-1', $data);
 	}
+	
+	// redirect function
+	public function searchPrint($code)
+	{
+		// return $code;
+		$data['print'] = $this->printList->getModel()->where('code', $code)->where('user_id', $this->user_id)->first();
+		if( ! $data['print'] ) {
+			return redirect('print/');
+		} else {
+			if( $data['print']['is_printed'] == 0 ) {
+				
+			} else {
+				if( $data['print']['is_ambil'] == 1 )
+				
+				return redirect('ambil/'.$code);
+			}			
+		}
+	}
 
 	/**
 	 * Show the form for creating a new resource.
@@ -149,9 +167,22 @@ class PrintController extends Controller {
 	{
 		$data = [
 			'print'		=> $this->printList->getModel()->where('code', $code)->where('user_id', $this->user_id)->first(),
-			
 		];
+		if( ! $data['print'] ) {
+			return redirect('print/');
+		}
 		return view('contents.print.step-3', $data);
+	}
+	
+	public function bayar($code)
+	{
+		$data = [
+			'print'		=> $this->printList->getModel()->where('code', $code)->where('user_id', $this->user_id)->first(),
+		];
+		if( ! $data['print'] ) {
+			return redirect('print/');
+		}
+		return view('contents.print.step-4', $data);
 	}
 	
 }

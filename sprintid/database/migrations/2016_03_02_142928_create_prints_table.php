@@ -23,8 +23,10 @@ class CreatePrintsTable extends Migration {
 			$table->tinyInteger('type_print');
 			$table->integer('money_spend');
 			$table->boolean('is_printed');
-            $table->dateTime('time_print');
-            $table->dateTime('time_pick');
+			$table->boolean('is_confirmed');
+			$table->boolean('is_taken');
+			$table->dateTime('time_print');
+            		$table->dateTime('time_pick');
 			$table->softDeletes();
 			$table->timestamps();
 		});

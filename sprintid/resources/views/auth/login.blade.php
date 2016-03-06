@@ -24,7 +24,7 @@
 				{!! Form::open(array('url' => '/auth/login','class' => 'form-horizontal' )) !!}
 				<div class="form-group">
 					<label for="email">Email</label>
-					<input type="email" id="email" name="email" class="form-control">
+					<input type="email" id="email" name="email" class="form-control" autofocus>
 				</div>
 				<div class="form-group">
 					<label for="email">Password</label>

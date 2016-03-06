@@ -141,7 +141,7 @@
 
 					<div class="form-group">
 						<label for="text_note">Keterangan</label>
-						<textarea name="text_note" id="text_note" cols="32" rows="10" class="form-control" placeholder="beri penjelasan halaman yang akan di print" style="height: 150px;"></textarea>
+						<textarea name="text_note" id="text_note" cols="32" rows="10" class="form-control" placeholder="beri penjelasan (halaman yang di print, ukuran kertas, diambil pukul)" style="height: 150px;"></textarea>
 					</div>
 					<div class="form-group div-btn-login">
 						<button class="btn btn-orange btn-lg btn-block" type="submit">UPLOAD</button>

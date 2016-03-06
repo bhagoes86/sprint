@@ -19,6 +19,7 @@ class CreatePrintsTable extends Migration {
 			$table->integer('place_id');
 			$table->string('code');
 			$table->string('text_note');
+			$table->string('name_file');
 			$table->string('url_file');
 			$table->tinyInteger('type_print');
 			$table->integer('money_spend');

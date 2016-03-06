@@ -64,6 +64,7 @@
 						<thead>
 							<tr>
 								<th width="10%">No</th>
+								<th>Nama File</th>
 								<th>Kode Print</th>
 								<th>Biaya</th>
 								<th>Status</th>
@@ -71,9 +72,10 @@
 							</tr>
 						</thead>
 						<tbody>
-							@forelse( $printList as $rowPrint )
+							@forelse( $printList as $key => $rowPrint )
 							<tr>
-								<td>1</td>
+								<td>{{ $key+1 }}</td>
+								<td>{{ $rowPrint['name_file'] }}</td>
 								<td>{{ $rowPrint['code'] }}</td>
 								<td>{{ $rowPrint['money_spend'] }},-</td>
 								<td>-</td>
@@ -81,7 +83,7 @@
 							</tr>
 							@empty
 							<tr>
-								<td colspan="5" class="text-center active">No data</td>
+								<td colspan="6" class="text-center active">No data</td>
 							</tr>
 							@endforelse
 						</tbody>

@@ -3,7 +3,7 @@
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#" style="padding: 0;">
 					<img alt="Brand" src="http://res.cloudinary.com/timdonat/image/upload/c_scale,h_77/v1456559153/logo_sprint_hn3tbp.png">
-					<a class="navbar-brand" href="{{ url('dashboard') }}" style="color: #FFF;padding-left: 20px">Sprint ID</a>
+					<a class="navbar-brand" href="{{ url('dashboard') }}" style="color: #FFF;padding-left: 20px">GOPRINT.ID</a>
 				</a>
 			</div>
 			<div class="navbar-right">

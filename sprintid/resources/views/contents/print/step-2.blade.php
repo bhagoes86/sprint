@@ -49,7 +49,7 @@
 					</ul>
 					<br>
 					<p>dengan format isi pesan sebagai berikut </p>
-					<blockquote><h3>{{ $print['code'] }} SPRINT</h3></blockquote>
+					<blockquote><h3>{{ $print['code'] }} GOPRINT.ID</h3></blockquote>
 					<p>Order anda akan dikerjakan / dieksekusi setelah anda mengirim konfirmasi tersebut kepada kami.</p>
 				</div>
 

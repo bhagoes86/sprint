@@ -16,7 +16,7 @@ class PrintList extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['user_id', 'url_file', 'place_id', 'type_print', 'text_note', 'code'];
+	protected $fillable = ['user_id', 'name_file', 'url_file', 'place_id', 'type_print', 'text_note', 'code'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

@@ -20,7 +20,7 @@ class PrintListRepository extends BaseRepository
 		return $this->model->where('user_id', $user_id)->get();
 	}
 
-	public function savePrintList($data, $user_id, $code, $url_file) {
+	public function savePrintList($data, $user_id, $code, $url_file, $name_file) {
 		
 		// generate code
 		$data['code'] 			= $code;
@@ -28,6 +28,7 @@ class PrintListRepository extends BaseRepository
 
 		return $this->model->create([
 			'user_id'		=> $user_id,
+			'name_file'		=> $name_file,
 			'url_file'		=> $data['url_file'],
 			'type_print'		=> $data['type_print'],
 			'place_id'		=> $data['place_id'],

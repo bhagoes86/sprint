@@ -77,12 +77,14 @@ class PrintController extends Controller {
 		// generate code print
 		$code = app('App\Repositories\PrintList\PrintListRepository')->_get_code();
 
-		$file_name = "";
+		$file_name 		= "";
+		$old_name_file 		= "";
 	
 		// section untuk file
 		if( $request->hasFile('url_file') ) {
 			$file_extensi 	= $request->file('url_file')->getClientOriginalExtension();
 			$file_name 	= $code . "." . $file_extensi;
+			$old_name_file	= $request->file('url_file')->getClientOriginalName();
 
 			if ( $file_extensi == "doc" || $file_extensi == "docx" || $file_extensi == "pdf" ||  $file_extensi == "xls" || $file_extensi == "xlsx" || $file_extensi == "ods" || $file_extensi == "odt") {
 				$request->file('url_file')->move(base_path() . '/public/file', $code . "." . $file_extensi);
@@ -95,7 +97,7 @@ class PrintController extends Controller {
 		}
 
 		// saving data
-		app('App\Repositories\PrintList\PrintListRepository')->savePrintList($request->all(), $this->user_id, $code, $file_name);
+		app('App\Repositories\PrintList\PrintListRepository')->savePrintList($request->all(), $this->user_id, $code, $file_name, $old_name_file);
 		return redirect('konfirm/' . $code);
 
 	}

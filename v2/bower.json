@@ -1,0 +1,24 @@
+{
+  "name": "goprint",
+  "homepage": "https://github.com/adeyahya/goprint",
+  "authors": [
+    "adeyahya <adeyahyaprasetyo@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.18",
+    "font-awesome": "^4.5.0"
+  }
+}

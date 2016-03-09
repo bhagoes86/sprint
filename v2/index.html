@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id" ng-app="goprint" ng-controller="mainCtrl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="http://res.cloudinary.com/dt2mntbmf/image/upload/c_scale,w_450/v1457503172/printer-online_n6irra.jpg"/>
+  <meta property="og:title" content="{{ setting.title }}"/>
+  <meta property="og:description" content="{{ setting.description }}"/>
+  <meta name="title" content="{{ setting.title }}"/>
+  <meta name="description" content="{{ setting.description }}"/>
+  <link rel="icon" 
+      type="image/png" 
+      href="http://res.cloudinary.com/dt2mntbmf/image/upload/c_scale,w_80/v1457429091/cloudprint_copy_s5c01m.png">
+  <title>{{ setting.title }}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="assets/js/dist/bundle.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="" class="navbar-brand">
+          <img src="http://res.cloudinary.com/dt2mntbmf/image/upload/c_scale,w_80/v1457429091/cloudprint_copy_s5c01m.png" alt="" style="float:left;margin-right: 15px; width: 50px;margin-top: -10px;">
+          GoPrint
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{{ setting.facebook }}">
+            <i class="fa fa-facebook"></i>
+          </a></li>
+
+          <li><a href="{{ setting.twitter }}">
+            <i class="fa fa-twitter"></i>
+          </a></li>
+
+          <li><a href="{{ setting.google }}">
+            <i class="fa fa-google-plus"></i>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-sm-12">
+          <header>
+            <h1>{{ setting.title }}</h1>
+            <p>Sekarang kamu bisa Ngeprint Dimanapun, Kapanpun, Tanpa Antri, dan Tentunya dengan harga yang tetap murah :)</p>
+          </header>
+          <br><br>
+          <form action="">
+            <div class="input-group">
+              <input type="email" class="form-control input-lg" placeholder="Alamat Email">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-paper-plane"></i> Waitinglist</button>
+              </div>
+            </div>
+          </form>
+          <span>
+            <small style="color: #989898; text-align:center;font-size: 13px;margin-top: 9px;display: block;">{{ setting.wishmessage }}</small>
+          </span>
+        </div>
+
+        <div class="col-md-7 visible-md visible-lg">
+          <img src="http://res.cloudinary.com/dt2mntbmf/image/upload/v1457429091/cloudprint_copy_s5c01m.png" width="60%" alt="" class="img-responsive pull-right">
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="featured">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img src="http://res.cloudinary.com/dt2mntbmf/image/upload/v1457500810/mudah_bwphed.svg" alt="" width="40%">
+          <header>
+            <h3>Mudah</h3>
+          </header>
+          <p>
+            {{ setting.mudah }}
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="http://res.cloudinary.com/dt2mntbmf/image/upload/v1457500798/cepat_isprx8.svg" alt="" width="40%">
+          <header>
+            <h3>Cepat</h3>
+          </header>
+          <p>
+            {{ setting.cepat }}
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="http://res.cloudinary.com/dt2mntbmf/image/upload/v1457500798/antri_gwweju.svg" alt="" width="40%">
+          <header>
+            <h3>No Antri</h3>
+          </header>
+          <p>
+            {{ setting.noantri }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <br><br>
+    <hr>
+  </div>
+
+  <section class="devices nice-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 text-right">
+          <header>
+            <h2>Mendukung Semua <br>Perangkat</h2>
+          </header>
+          <p>Semua perangkat kamu mulai dari laptop, tablet, smartphone, atau mungkin juga SmartTv bisa kamu gunakan buat ngeprint.</p>
+          <p>Satu - satunya syarat adalah koneksi internet :)</p>
+        </div>
+
+        <div class="col-md-6 col-md-offset-1">
+          <div class="text-center">
+            <img src="http://res.cloudinary.com/dt2mntbmf/image/upload/v1457500801/devices_ts98be.png" alt="" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="join nice-padding">
+    <div class="container">
+      <div class="col-md-6">
+        <img src="http://res.cloudinary.com/dt2mntbmf/image/upload/v1457439599/kick_push_dribbble_ed4quv.gif" class="img-responsive" alt="">
+      </div>
+      <div class="col-md-6">
+        <header>
+          <h2>Join Waitinglist <br>Yuk :)</h2>
+        </header>
+        <p>
+          Saat ini system kami masih dalam tahap development, begitu kami system siap kami segera memberitahu anda melalui email :)
+        </p>
+        <br>
+        <form action="">
+          <div class="input-group">
+            <input type="email" class="form-control input-lg" placeholder="Alamat Email">
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-paper-plane"></i> Waitinglist</button>
+            </div>
+          </div>
+        </form>
+        <span>
+          <small style="color: #989898; text-align:center;font-size: 13px;margin-top: 9px;display: block;">{{ setting.wishmessage }}</small>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Copyright GoPrint 2016 | Build with <i class="fa fa-heart"></i></p>
+    </div>
+  </footer>
+</body>
+</html>

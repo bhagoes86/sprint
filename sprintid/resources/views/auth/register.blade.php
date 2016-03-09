@@ -5,7 +5,7 @@
 @include('partials.header-initial', array('signup'=>'active'))
 
 <div class="container">
-	<h1 class="title-box">SIGNUP TO SPRINT</h1>
+	<h1 class="title-box">SIGNUP TO GOPRINT.ID</h1>
 	<div class="row">
 		<div class="col-md-8">
 			@if (count($errors) > 0)

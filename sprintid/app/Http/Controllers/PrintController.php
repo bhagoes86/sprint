@@ -11,7 +11,7 @@ class PrintController extends Controller {
 
 	protected $user_id;
 	protected $printList;
-	
+
 	/**
 	 * Create a new controller instance.
 	 *
@@ -46,7 +46,7 @@ class PrintController extends Controller {
 			return redirect('print/');
 		} else {
 			if( $data['print']['is_printed'] == 0 ) {
-				
+			
 			} else {
 				if( $data['print']['is_ambil'] == 1 )
 				

@@ -18,10 +18,19 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('bayar/{code}', ['as' => 'print.step4', 'uses' => 'PrintController@bayar']);
 });
 
+Route::group(['prefix' => 'admin'], function() {
+	Route::get('/', ['as' => 'admin.login', 'uses' => 'Admin\AdminController@index']);
+	Route::get('dashboard', function() {
+		return view('admin.index');
+	});
+	Route::get('list-print', function() {
+		return view('admin.list_print');
+	});
+});
+
 Route::get('kritik-saran', function () {
 	return "kritik-saran";
 });
-
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -32,11 +41,4 @@ Route::controllers([
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
-
-
-
-// Route::get('/login2', function(){
-//  return view('contents.login');
-// });
-
 

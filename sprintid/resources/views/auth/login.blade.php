@@ -9,7 +9,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<h1 class="title-box">LOGIN TO SPRINT</h1>
+			<h1 class="title-box">LOGIN TO GOPRINT.ID</h1>
 			@if (count($errors) > 0)
 			<div class="alert alert-danger">
 				<strong>Sorry</strong> There were some problems with your input.<br><br>

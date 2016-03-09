@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+body {
+  font-size: 13pt;
+  color: #504B4B; }
+
+.navbar-default {
+  font-size: 12pt;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0px;
+  padding-top: 30px; }
+  .navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {
+    color: white; }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-brand:hover {
+    color: #DCDCDC; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway","Helvetica Neue", sans-serif; }
+
+header.primary {
+  background: url("http://res.cloudinary.com/dt2mntbmf/image/upload/v1457500801/goprint_uugeql.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  margin-top: -102px; }
+  header.primary .container p {
+    font-size: 22px;
+    font-weight: 200;
+    color: #D6D6D6; }
+
+.featured .col-md-4 {
+  padding: 65px; }
+
+.nice-padding {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.b .col-sm-6 {
+  padding: 0px 90px; }
+
+.icon-block {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: white;
+  margin: 0 auto;
+  position: relative; }
+  .icon-block i.fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.join {
+  background-color: #F3F3F3; }
+
+footer {
+  background-color: #F3F3F3;
+  border-top: solid rgba(0, 0, 0, 0.02) 2px;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 12pt;
+  color: #8A8A8A;
+  padding-bottom: 5px; }
+
+/*# sourceMappingURL=style.css.map */

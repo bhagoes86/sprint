@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin', ['sidebar' => $sidebar ])
 @section('title','Dashboard')
 @section('head')
 <link rel="stylesheet" href="{{ asset('assets/lib/summernote/dist/summernote.css') }}">

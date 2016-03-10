@@ -9,8 +9,18 @@ class AdminController extends Controller {
 
 	public function index()
 	{
-		return view('admin.login');
-		//return view('contents.print.step-1');
+    $data = [
+      'sidebar'     => 'dashboard',
+    ];
+		return view('admin.index', $data);
 	}
+
+  public function getListPrint()
+  {
+    $data = [
+      'sidebar'     => 'listToPrint',
+    ];
+    return view('admin.list_print', $data);
+  }
 
 }

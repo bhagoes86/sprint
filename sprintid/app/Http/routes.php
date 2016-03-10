@@ -20,12 +20,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['prefix' => 'admin'], function() {
 	Route::get('/', ['as' => 'admin.login', 'uses' => 'Admin\AdminController@index']);
-	Route::get('dashboard', function() {
-		return view('admin.index');
-	});
-	Route::get('list-print', function() {
-		return view('admin.list_print');
-	});
+	Route::get('dashboard', ['as' => 'admin.dashboard', 'uses' => 'Admin\AdminController@index']);
+	Route::get('list-print', ['as' => 'admin.listPrint', 'uses' => 'Admin\AdminController@getListPrint']);
 });
 
 Route::get('kritik-saran', function () {

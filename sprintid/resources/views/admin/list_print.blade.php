@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin', ['sidebar' => $sidebar ])
 @section('title','Dashboard')
 @section('head')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css">

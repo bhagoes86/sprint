@@ -131,9 +131,9 @@
                 <ul class="sidebar-menu">
                     <li class="header">Menu</li>
                     <!-- Optionally, you can add icons to the links -->
-                    <li class="active"><a href="#"><span>Dashboard</span></a></li>
-                    <li><a href="#"><span>List to Print</span></a></li>
-                    <li><a href="#"><span>List User</span></a></li>
+                    <li {!! is_class_active($sidebar,'dashboard') !!}><a href="{{ url('admin/') }}"><span>Dashboard</span></a></li>
+                    <li {!! is_class_active($sidebar,'listToPrint') !!}><a href="{{ url('admin/list-print') }}"><span>List to Print</span></a></li>
+                    <li {!! is_class_active($sidebar,'listUser') !!}><a href="#"><span>List User</span></a></li>
                 </ul><!-- /.sidebar-menu -->
             </section>
             <!-- /.sidebar -->

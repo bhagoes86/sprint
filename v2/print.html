@@ -20,9 +20,14 @@
   <script src="assets/js/dist/bundle.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default" id="nav">
     <div class="container">
       <div class="navbar-header">
+        <button class="toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
         <a href="" class="navbar-brand">
           <img src="http://res.cloudinary.com/dt2mntbmf/image/upload/c_scale,w_80/v1457429091/cloudprint_copy_s5c01m.png" alt="" style="float:left;margin-right: 15px; width: 50px;margin-top: -10px;">
           GoPrint
@@ -31,15 +36,15 @@
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="{{ setting.facebook }}">
-            <i class="fa fa-facebook"></i>
+            Dashboard
           </a></li>
 
           <li><a href="{{ setting.twitter }}">
-            <i class="fa fa-twitter"></i>
+            Print
           </a></li>
 
           <li><a href="{{ setting.google }}">
-            <i class="fa fa-google-plus"></i>
+            Logout
           </a></li>
         </ul>
       </div>
@@ -57,10 +62,10 @@
   <section class="step">
     <nav>
       <ol class="cd-multi-steps text-top">
-        <li class="visited"><a href="#0">Cart</a></li>
-        <li class="visited" ><a href="#0">Billing</a></li>
-        <li class="current"><em>Delivery</em></li>
-        <li><em>Review</em></li>
+        <li class="visited"><a href="#0"><i class="fa fa-upload"></i> Upload</a></li>
+        <li class="visited" ><a href="#0"><i class="fa fa-check"></i> Konfirmasi</a></li>
+        <li class="current"><em><i class="fa fa-hand-rock-o"></i> Ambil</em></li>
+        <li><em><i class="fa fa-shopping-cart"></i> Bayar</em></li>
       </ol>
     </nav>
   </section>

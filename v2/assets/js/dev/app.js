@@ -14,3 +14,14 @@ angular.module('goprint',[])
       noantri: "Tidak perlu datang ke tempat, setelah selesai segera kami kirimi sms :)",
     };
   }]);
+
+$(function(){
+  $(window).on('scroll', function(){
+    var top = $(window).scrollTop();
+    if(top >= 15){
+      $("#nav").addClass("fixed-nav");
+    }else{
+      $("#nav").removeClass("fixed-nav");
+    }
+  })
+})

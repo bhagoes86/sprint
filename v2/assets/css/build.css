@@ -241,7 +241,7 @@ Multi steps indicator
     /* change the custom icon for the visited item - check icon */
     background-position: 0 -60px; }
   .cd-multi-steps.text-top li, .cd-multi-steps.text-bottom li {
-    width: 80px;
+    width: 120px;
     text-align: center; }
   .cd-multi-steps.text-top li::after, .cd-multi-steps.text-bottom li::after {
     /* this is the line connecting 2 adjacent items */
@@ -324,7 +324,10 @@ Add a counter to the multi-steps indicator
   .cd-multi-steps.text-bottom.count li > * {
     padding-top: 34px; } }
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,900);
+*, *::after, *::before {
+  box-sizing: border-box; }
+
 body {
   font-size: 13pt;
   color: #504B4B; }
@@ -334,11 +337,29 @@ body {
   background-color: transparent;
   border-color: transparent;
   border-radius: 0px;
-  padding-top: 30px; }
+  padding-top: 30px;
+  position: absolute;
+  top: 0;
+  width: 100%; }
   .navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {
     color: white; }
   .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-brand:hover {
     color: #DCDCDC; }
+
+.fixed-nav {
+  font-size: 12pt;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: url("http://res.cloudinary.com/dt2mntbmf/image/upload/v1457500801/goprint_uugeql.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: 2;
+  padding-bottom: 10px;
+  box-shadow: 0px 0px 3px 0px black; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway","Helvetica Neue", sans-serif; }
@@ -347,7 +368,7 @@ header.secondary {
   background: url("http://res.cloudinary.com/dt2mntbmf/image/upload/v1457500801/goprint_uugeql.jpg") no-repeat center center fixed;
   background-size: cover;
   color: white;
-  padding-top: 100px;
+  padding-top: 200px;
   padding-bottom: 80px;
   margin-top: -102px; }
 
@@ -400,5 +421,23 @@ header.primary {
   .footer hr {
     border-top: 1px solid #44596F; }
 
-*, *::after, *::before {
-  box-sizing: border-box; }
+input, textarea, .btn, select {
+  border-radius: 2px !important; }
+
+table.table.table-striped {
+  text-align: center; }
+  table.table.table-striped th {
+    text-align: center; }
+
+.profile-block em {
+  color: #A5A5A5; }
+
+.profile-block .saldo {
+  font-family: "Raleway","Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 28pt; }
+  .profile-block .saldo label {
+    font-size: 10pt;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: -11px; }

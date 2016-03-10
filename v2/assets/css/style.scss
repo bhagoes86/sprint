@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,900);
+*, *::after, *::before {
+  box-sizing: border-box;
+}
 body{
   font-size: 13pt;
   color: #504B4B;
@@ -9,12 +12,30 @@ body{
   border-color: transparent;
   border-radius: 0px;
   padding-top: 30px;
+  position: absolute;
+  top: 0;
+  width: 100%;
   .navbar-nav>li>a,.navbar-brand{
     color: white;
   }
   .navbar-nav>li>a:hover,.navbar-brand:hover{
     color: #DCDCDC;
   }
+}
+.fixed-nav{
+  font-size: 12pt;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: url('http://res.cloudinary.com/dt2mntbmf/image/upload/v1457500801/goprint_uugeql.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 2;
+  padding-bottom: 10px;
+  box-shadow: 0px 0px 3px 0px black;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -24,7 +45,7 @@ header.secondary{
   background: url('http://res.cloudinary.com/dt2mntbmf/image/upload/v1457500801/goprint_uugeql.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
-  padding-top: 100px;
+  padding-top: 200px;
   padding-bottom: 80px;
   margin-top: -102px;
 }
@@ -92,6 +113,30 @@ header.primary{
   }
 }
 
-*, *::after, *::before {
-  box-sizing: border-box;
+input, textarea, .btn, select {
+    border-radius: 2px !important;
+}
+
+table.table.table-striped{
+  text-align: center;
+  th{
+    text-align: center;
+  }
+}
+
+.profile-block{
+  em{
+    color: #A5A5A5;
+  }
+  .saldo{
+    font-family: "Raleway","Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 28pt;
+    label{
+      font-size: 10pt;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: -11px;
+    }
+  }
 }

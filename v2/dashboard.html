@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id" ng-app="goprint" ng-controller="mainCtrl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="http://res.cloudinary.com/dt2mntbmf/image/upload/c_scale,w_450/v1457503172/printer-online_n6irra.jpg"/>
+  <meta property="og:title" content="{{ setting.title }}"/>
+  <meta property="og:description" content="{{ setting.description }}"/>
+  <meta name="title" content="{{ setting.title }}"/>
+  <meta name="description" content="{{ setting.description }}"/>
+  <link rel="icon" 
+      type="image/png" 
+      href="http://res.cloudinary.com/dt2mntbmf/image/upload/c_scale,w_80/v1457429091/cloudprint_copy_s5c01m.png">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/build.css">
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="assets/js/dist/bundle.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="" class="navbar-brand">
+          <img src="http://res.cloudinary.com/dt2mntbmf/image/upload/c_scale,w_80/v1457429091/cloudprint_copy_s5c01m.png" alt="" style="float:left;margin-right: 15px; width: 50px;margin-top: -10px;">
+          GoPrint
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{{ setting.facebook }}">
+            Dashboard
+          </a></li>
+
+          <li><a href="{{ setting.twitter }}">
+            Print
+          </a></li>
+
+          <li><a href="{{ setting.google }}">
+            Logout
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="secondary">
+    <div class="container">
+      <div class="text-center">
+        <h1>Dashboard</h1>
+      </div>
+    </div>
+  </header>
+
+  <section style="margin-top: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="profile-block">
+            <div class="text-right">
+              <img src="https://z-1-scontent-sin1-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/12744620_1214619191900173_1388933905303712209_n.jpg?oh=2063d3044582cc6f5b1a18784a505560&oe=57992BCF" width="100px" alt="" class="img-rounded">
+              <header>
+                <h3>Ade Yahya Prasetyo</h3>
+                <em>adeyahyaprasetyo@gmail.com</em>
+                <em>+628125906880</em>
+              </header>
+              <div class="saldo">
+                <label>Saldo</label>
+                <span>Rp. 40.0000</span>
+              </div>
+              <hr>
+              <ul class="nav nav-pills nav-stacked">
+                <li class="active">
+                  <a href="">File</a>
+                </li>
+
+                <li>
+                  <a href="">History</a>
+                </li>
+
+                <li>
+                  <a href="">Ubah Password</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-9">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th width="5%">No</th>
+                <th width="50%">Name</th>
+                <th>Extension</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>6</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>7</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>8</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>9</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>10</td>
+                <td>Skripsi</td>
+                <td>.docx</td>
+                <td>
+                  <a href="" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <nav class="text-center">
+            <ul class="pagination">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, minus accusamus deserunt sunt totam eveniet. Similique necessitatibus rem laudantium, quibusdam earum placeat. Perspiciatis iure consequuntur eaque necessitatibus ea. Hic, omnis.</p>
+      <hr>
+      &copy; Copyright GoPrint 2016
+    </div>
+  </div>
+</body>
+</html>
